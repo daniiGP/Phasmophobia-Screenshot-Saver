@@ -12,7 +12,7 @@ namespace ScreenshotSaver
 {
     public class Main : MelonMod
     {
-        public static string path = @"C:\Program Files (x86)\Steam\steamapps\common\Phasmophobia";
+        public static string path = Directory.GetCurrentDirectory() + "\\";
         List<string> fileIds = new List<string>();
         private bool isInMenu = false;
 
@@ -23,10 +23,10 @@ namespace ScreenshotSaver
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
-            if(sceneName != "Menu_New")
+            if (sceneName != "Menu_New")
             {
                 CheckFunction();
-            } 
+            }
             else
             {
                 isInMenu = true;
@@ -84,7 +84,7 @@ namespace ScreenshotSaver
         private bool sendFileDiscord(string photoPath)
         {
             string id = getFileId(photoPath);
-            for(int i = 0; i < fileIds.Count; i++)
+            for (int i = 0; i < fileIds.Count; i++)
             {
                 if (fileIds[i] == id)
                 {

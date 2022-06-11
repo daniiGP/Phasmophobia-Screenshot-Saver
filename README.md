@@ -10,4 +10,4 @@ This only works using the [PhasBypass](https://github.com/daniiGP/PhasBypass), i
 
 # Installation
   
-Change the path of the game and webhook url, in main.cs. Then compile the mod, add the dll to Mods folder of Phasmophobia Mods path.
+Change the webhook url, in main.cs. Then compile the mod, add the dll to Mods folder of Phasmophobia Mods path.
